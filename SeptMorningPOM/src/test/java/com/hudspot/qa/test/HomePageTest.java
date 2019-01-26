@@ -1,8 +1,5 @@
 package com.hudspot.qa.test;
 
-import java.util.Properties;
-
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,20 +12,18 @@ import com.hudspot.qa.pages.LoginPage;
 
 
 public class HomePageTest extends BasePage{
+	
+	LoginPage loginPage;
+	HomePage homePage;
 
-	public BasePage basePage;
-	public WebDriver driver;
-	public Properties prop;
-	public LoginPage loginPage;
-	public HomePage homePage;
+	public HomePageTest(){
+		super();
+	}
 
 	@BeforeMethod
 	public void setUp() {
-
-		basePage = new BasePage();
-		
-		
-		driver.get(prop.getProperty("url"));
+        init();
+        loginPage = new LoginPage();
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 

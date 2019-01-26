@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.hudspot.qa.pages.BasePage;
+import com.hudspot.qa.pages.HomePage;
 import com.hudspot.qa.pages.LoginPage;
 import com.hudspot.qa.util.Constants;
 
@@ -17,6 +18,7 @@ import com.hudspot.qa.util.Constants;
 public class LoginTest extends BasePage{
 
     LoginPage loginPage;
+    HomePage homePage;
 	
 	public LoginTest(){
 		super();
